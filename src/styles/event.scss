@@ -1,0 +1,66 @@
+@use '/src/styles/variables';
+
+.event{
+    padding: 80px 0;
+    
+    .container{
+        display: flex;
+        gap: 40px;
+    }
+
+    &--frontend{
+        background-image: linear-gradient(variables.$blue1, variables.$blue2);
+    }
+
+    &--ux-ui{
+        background-image: linear-gradient(variables.$blue2, variables.$pink);
+    }
+
+    &--backend{
+        background-image: linear-gradient(variables.$yellow, variables.$pink);
+    }
+
+    &--data-science{
+        background-image: linear-gradient(variables.$pink, variables.$yellow);
+    }
+
+    &__image{
+        max-width: 360px;
+    }
+
+    &--image-left{
+        .container{
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__detail{
+        
+        &__title{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__description{
+            
+            line-height: 22px;
+        }
+    }
+
+    @media (max-width: 640px){
+        .container{
+            
+            display: block;
+        }
+
+        &__detail{
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+
+        &__image{
+            width: 100%;
+        }
+    }
+}
